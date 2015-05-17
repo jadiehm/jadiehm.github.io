@@ -1,0 +1,122 @@
+.gallery .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.gallery .control-button:hover {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+.gallery {
+  position: relative;
+}
+
+.gallery .item {
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+  margin:0 auto;
+}
+
+.gallery .controls {
+  position: absolute;
+  margin-top:1em;
+  width: 100%;
+  text-align: center;
+}
+
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s;
+}
+
+/*my styles*/
+
+body{
+  background-color:#c1e553;
+}
+
+.RoRo, .Willie{
+  margin: 0 auto;
+  position:relative;
+}
+
+h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight:200;
+    padding-left:1em;
+}
+
+.copyright{
+  text-align:left;
+  float:left;
+  margin-left:3em;
+}
+
+.credit{
+  text-align:right;
+  float: right;
+  margin-right:3em;
+}
+
+.copyright, .credit{
+  font-size:0.75em;
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:400;
+
+}
+
+.copyright a, .credit a{
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+
+}
+
+.copyright a:hover, .credit a:hover{
+  text-decoration:underline;
+  cursor:default;
+}
+
+footer{
+  margin-top:3em;
+  clear:both;
+}
+
+@media screen and (max-width: 450px) {
+  .credit{
+    float:left;
+    text-align:left;
+    clear:both;
+    margin: 0 0 0 1em;
+  }
+
+  .copyright{
+    margin-left:1em;
+  }
+
+  footer{
+    margin-top:2em;
+  }
+
+  h1{
+    margin-bottom:0em;
+    padding-left:0.5em;
+  }
+
+  .gallery .controls {
+  position: absolute;
+  margin-top:-0.75em;
+  width: 100%;
+  text-align: center;
+}
+}  
