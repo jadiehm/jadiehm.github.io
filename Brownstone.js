@@ -24,5 +24,5 @@ $("#LBColor").click(function(){
 });
 
 $("#PigeonBody").click(function(){
- TweenMax.to("#PigeonHead", 0.25, {x:-2.5, repeat: 9, repeatDelay: 0.25, yoyo:true});
+ TweenMax.to("#PigeonHead", 0.125, {x:-2.5, repeat: 9, repeatDelay: 0.25, yoyo:true});
 });
