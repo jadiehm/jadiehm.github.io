@@ -20,7 +20,7 @@ $("#LightBulbWindow").click(function(){
 });
 
 $("#LBColor").click(function(){
- $("#LBColor").css( "fill", "#e6f5fd" );
+  TweenMax.to("#LBColor", 1, {css:{fill:"#e6f5fd"}, repeat: 1, repeatDelay: 6, yoyo:true});
 });
 
 $("#PigeonBody").click(function(){
