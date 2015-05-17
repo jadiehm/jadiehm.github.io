@@ -1,0 +1,65 @@
+body {
+	background-color:#e6e7e8;
+}
+
+.ClickWindow {
+	cursor:pointer;
+}
+
+footer{
+	margin-top:0.25em;
+	clear:both;
+}
+
+.copyright{
+	text-align:left;
+	float:left;
+	margin-left:2.5em;
+}
+
+.credit{
+	text-align:right;
+	float: right;
+	margin-right:2.5em;
+}
+
+.copyright, .credit{
+	font-size:0.75em;
+	color: black;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:400;
+
+}
+
+.copyright a, .credit a{
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+
+}
+
+.copyright a:hover, .credit a:hover{
+	text-decoration:underline;
+	cursor:default;
+}
+
+@media screen and (max-width: 450px) {
+	body{
+		margin-top:-420px;
+	}
+
+		.credit{
+		float:left;
+		text-align:left;
+		clear:both;
+		margin: 0 0 0 1em;
+	}
+
+	.copyright{
+		margin-left:1em;
+	}
+
+	footer{
+		margin-top:-420px;
+	}
+}	
