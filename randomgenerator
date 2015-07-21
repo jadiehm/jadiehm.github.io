@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Donald Trump Random Sentence Generator</title>
+
+    <style type="text/css">
+      .container {
+        max-width: 640px;
+      }
+
+      body {
+        font-family: 'Proxima-Nova', sans-serif;
+        font-size: 1em;
+        color: black;
+        background-color: #2f5491;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      p {
+        margin:0;
+      }
+
+      h1 {
+        padding: 5% 0 5% 0;
+        font-family: 'Campton', sans-serif;
+        font-size: 3.75em;
+        line-height: 60px;
+        color: black;
+        display: inline-block;
+        text-transform:uppercase;
+      }
+      
+
+      p.hey {
+        font-size: 1em;
+        line-height: 1em;
+        color: black;
+        display: inline-block;
+        font-style: italic;
+      }
+
+      .bordertop {
+        width: 100%;
+        border-top: 2px solid black;
+        margin: 10px 0 0 0;
+      }
+
+      .padit {
+        padding-top: 2%;
+      }
+
+      .btn {
+        font-family:'Proxima-Nova', sans-serif;
+        font-size: 1.5em;
+        line-height: .9em;
+        color: white;
+        text-transform: uppercase;
+        height: 70px;
+        background-color: black;
+        border: none;
+        border-radius: 10px;
+        padding: 0 1em 0 1em;
+      }
+      
+      .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+        background-color: #5e8dc9;
+        color: white;
+        opacity: .8;
+        border-color: none;
+        outline: none;
+      }
+
+      .well {
+        padding: 1em;
+        font-size: 1.5em;
+        line-height: 1.8em;
+        color: black;
+        background-color: white;
+      }
+      
+      .social svg {
+        height: 30px;
+        width: 30px;
+        margin-left: 10px;
+        display: inline;
+
+      }
+
+      .social svg, .logo svg { fill: white; }
+      .social svg:hover, .logo svg:hover, .abc svg {
+        fill: #5e8dc9;
+      }
+
+      .abc svg { fill:white; } 
+      .abc {
+        float:right;
+        height: 30px;
+        margin: -30px 10px 0 0;
+        display: block;
+      }
+      .abc svg:hover{ fill: #5e8dc9;
+      }
+      
+
+      .col-md-12 {
+        margin-top: -40px;
+      }
+
+      @media screen and (max-width: 768px) {
+        h1 {
+          font-size: 6.2em;
+          line-height: .9em;
+        }
+        p.hey {
+          border-top: 2px solid #292030;
+          padding-top: 15px;
+          width: 100%;
+        }
+        .social {
+          margin-top: 20px;
+        }
+        .social svg {
+          margin-bottom: -40px;
+        }
+      }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        
+        <div class="social col-sm-push-8 col-sm-4 text-right">
+          <a id="button_facebook" href="#">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29.3 29.3" enable-background="new 0 0 29.3 29.3" xml:space="preserve">
+            <path d="M27.7,0H1.6C0.7,0,0,0.7,0,1.6v26.1c0,0.9,0.7,1.6,1.6,1.6h14.1V18h-3.8v-4.4h3.8v-3.3
+             c0-3.8,2.3-5.8,5.7-5.8c1.6,0,3,0.1,3.4,0.2v4l-2.3,0c-1.8,0-2.2,0.9-2.2,2.2v2.8h4.4L24,18h-3.8v11.3h7.5c0.9,0,1.6-0.7,1.6-1.6
+             V1.6C29.3,0.7,28.6,0,27.7,0z"/>
+            </svg>
+          </a>
+          <a id="button_twitter" href="#">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29.3 29.3" enable-background="new 0 0 29.3 29.3" xml:space="preserve">
+            <path d="M27.7,0H1.6C0.7,0,0,0.7,0,1.6v26.1c0,0.9,0.7,1.6,1.6,1.6h26.1c0.9,0,1.6-0.7,1.6-1.6V1.6
+             C29.3,0.7,28.6,0,27.7,0z M22.4,10.7c0,0.2,0,0.3,0,0.5c0,5.3-4,11.4-11.4,11.4c-2.3,0-4.4-0.7-6.1-1.8c0.3,0,0.6,0.1,1,0.1
+             c1.9,0,3.6-0.6,5-1.7c-1.8,0-3.2-1.2-3.7-2.8c0.2,0,0.5,0.1,0.8,0.1c0.4,0,0.7,0,1.1-0.1c-1.8-0.4-3.2-2-3.2-3.9c0,0,0,0,0-0.1
+             c0.5,0.3,1.2,0.5,1.8,0.5c-1.1-0.7-1.8-1.9-1.8-3.3c0-0.7,0.2-1.4,0.5-2c2,2.4,4.9,4,8.3,4.2c-0.1-0.3-0.1-0.6-0.1-0.9
+             c0-2.2,1.8-4,4-4c1.2,0,2.2,0.5,2.9,1.3c0.9-0.2,1.8-0.5,2.5-1c-0.3,0.9-0.9,1.7-1.8,2.2c0.8-0.1,1.6-0.3,2.3-0.6
+             C23.9,9.4,23.2,10.1,22.4,10.7z"/>
+            </svg>
+          </a>
+          <a id="button_google" href="#">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29.3 29.3" enable-background="new 0 0 29.3 29.3" xml:space="preserve">
+            <g>
+            <path d="M12.2,26.3c-0.8-0.8-2-1.8-3.6-2.9c-0.3,0-0.6,0-1,0c-0.2,0-0.8,0-1.7,0.1C4.9,23.5,3.9,23.7,3,24
+              c-0.2,0.1-0.5,0.2-1,0.4c-0.4,0.2-0.8,0.5-1.3,0.8c-0.3,0.2-0.5,0.5-0.7,0.8v1.7c0,0.9,0.7,1.6,1.6,1.6h11.7c0-0.1,0-0.1,0-0.1
+              C13.3,28.1,12.9,27.1,12.2,26.3z"/>
+            <path d="M7.3,22.1c-0.3-0.4-0.6-0.9-0.9-1.4c-0.3-0.5-0.4-1-0.4-1.7c0-0.4,0.1-0.7,0.2-1c0.1-0.3,0.2-0.5,0.3-0.8
+             c-0.5,0.1-1,0.1-1.4,0.1c-2.1,0-3.7-0.6-5-1.8v7.9c1.1-0.5,2.2-0.8,3.4-1C5,22.3,6.3,22.1,7.3,22.1z"/>
+            <path d="M4.6,15.4c0.7,0.6,1.5,0.8,2.5,0.8c1.2,0,2.1-0.5,2.9-1.3c0.4-0.6,0.6-1.1,0.7-1.7c0.1-0.6,0.1-1.1,0.1-1.5
+             c0-1.8-0.4-3.5-1.3-5.3c-0.4-0.9-1-1.5-1.7-2.1C7.1,3.8,6.3,3.6,5.4,3.5c-1.2,0-2.2,0.5-3,1.5c-0.7,1-1,2.1-1,3.3
+             c0,1.6,0.5,3.3,1.4,5C3.3,14.1,3.9,14.8,4.6,15.4z"/>
+            <path d="M27.7,0H1.6C0.7,0,0,0.7,0,1.6v3.3c0.2-0.1,0.3-0.3,0.4-0.4c1.3-1,2.6-1.7,3.9-2C5.7,2.2,7,2.1,8.1,2.1H17
+             l-2.7,1.6h-2.7c0.3,0.2,0.6,0.4,0.9,0.8c0.3,0.3,0.7,0.8,1,1.3c0.3,0.5,0.6,1,0.8,1.7c0.2,0.6,0.3,1.4,0.3,2.3
+             c0,1.6-0.4,2.9-1.1,3.8c-0.3,0.5-0.7,0.9-1.1,1.3c-0.4,0.4-0.8,0.8-1.3,1.2c-0.3,0.3-0.5,0.6-0.7,0.9c-0.3,0.4-0.4,0.8-0.4,1.3
+             c0,0.5,0.1,0.8,0.4,1.1c0.2,0.3,0.5,0.5,0.7,0.8l1.5,1.2c0.9,0.8,1.8,1.6,2.5,2.5c0.7,0.9,1,2.2,1,3.7c0,0.6-0.1,1.3-0.2,1.8h11.9
+             c0.9,0,1.6-0.7,1.6-1.6V1.6C29.3,0.7,28.6,0,27.7,0z M28.1,8.9h-4.6v4.7h-2.3V8.9h-4.6V6.7h4.6V2.1h2.3v4.6h4.6V8.9z"/>
+            </g>
+            </svg>
+          </a>
+        </div>
+        <div class="abc col-sm-push-8 col-sm-4 text-right"> 
+            <a id="abc_logo" href="#">
+              <svg version="1.1" id="ABC_x5F_News" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="86.765px" height="30px" viewBox="0 0 86.765 30" enable-background="new 0 0 86.765 30" xml:space="preserve">
+                <g>
+                  <path d="M46.674,7.375c-0.256,0-1.579,0.077-1.811,0.077c-0.162,0-2.158-0.077-2.204-0.077h-0.418v0.361h0.395
+                    c1.346,0,1.879,0.466,1.879,1.675v7.604l-8.84-9.641h-0.372c-0.186,0-1.067,0.077-1.369,0.077c-0.187,0-2.092-0.077-2.254-0.077
+                    h-0.349v0.361h0.418c0.465,0,1.139,0.396,1.767,1.047v10.408c0,1.117-0.326,1.373-1.884,1.513v0.388h0.373
+                    c0.325,0,1.812-0.077,2.021-0.077c0.371,0,1.973,0.077,2.297,0.077h0.441v-0.388h-0.395c-1.531,0-1.949-0.489-1.949-2.305V9.739
+                    l10.558,11.508h0.417V9.225c0-1.069,0.325-1.395,1.557-1.489L46.93,7.375H46.674z"/>
+                  <path d="M55.531,20.238h-2.318c-0.789,0-1.184-0.396-1.184-1.188v-4.819h2.227c1.623,0,2.296,0.512,2.48,1.815h0.392v-4.171
+                    l-0.415-0.023c-0.161,1.095-0.765,1.607-1.854,1.607h-2.806V8.176h3.246c1.622,0,2.327,0.628,2.398,2.187h0.359L58.01,7.375h-0.929
+                    c-0.693,0-3.916,0.077-4.403,0.077c-0.023,0-3.415-0.077-4.043-0.077h-0.904v0.361h0.348c1.092,0,1.441,0.279,1.441,1.187v10.571
+                    c0,0.908-0.35,1.188-1.441,1.211h-0.373v0.388h0.605c0.789-0.023,4.251-0.077,4.971-0.077c1.066,0,4.264,0.077,4.938,0.077
+                    l0.977-2.927h-0.419C58.126,19.562,57.036,20.238,55.531,20.238z"/>
+                  <path d="M77.079,7.375h-0.163c-0.44,0-1.346,0.077-1.577,0.077c-0.489,0-1.302-0.077-1.627-0.077h-0.116v0.361h0.419
+                    c0.721,0,1.045,0.28,1.045,0.931c0,0.372-0.14,0.977-0.441,1.907l-2.44,7.256l-3.091-8.56c-0.139-0.372-0.232-0.743-0.232-0.953
+                    c0-0.396,0.372-0.582,1.139-0.582h0.558V7.375h-0.558c-0.371,0-2.045,0.077-2.37,0.077c-0.396,0-2.068-0.077-2.395-0.077h-0.372
+                    v0.361c1.116,0.024,1.558,0.396,2.069,1.815l1.185,3.302l-1.812,4.908l-3.185-8.605c-0.115-0.325-0.186-0.627-0.186-0.837
+                    c0-0.372,0.279-0.558,0.953-0.582V7.375h-0.419c-0.278,0-1.603,0.077-1.857,0.077c-0.303,0-1.582-0.077-1.837-0.077h-0.396v0.339
+                    c0.604,0.116,0.93,0.488,1.278,1.418l4.532,12.141h0.627l2.72-7.234l2.649,7.234h0.65l3.904-11.537
+                    c0.463-1.419,0.765-1.837,1.346-2.001V7.375z"/>
+                  <path d="M82.19,12.358c-2.225-1.021-2.851-1.601-2.851-2.622c0-1.185,1.09-1.974,2.757-1.974c1.313,0,2.336,0.417,2.988,1.184
+                    c0.303,0.38,0.442,0.682,0.651,1.378h0.329l-0.047-2.925h-0.399c-0.069,0.154-0.163,0.201-0.349,0.201
+                    c-0.209,0-0.581-0.047-0.953-0.139c-0.931-0.231-1.791-0.347-2.581-0.347c-2.627,0-4.362,1.414-4.362,3.55
+                    c0,0.928,0.3,1.625,1.018,2.391c0.486,0.465,1.065,1.021,3.391,2.136c2.399,1.137,3.048,1.74,3.048,2.855
+                    c0,1.509-1.343,2.554-3.335,2.554c-1.158,0-2.2-0.302-2.988-0.905c-0.624-0.464-0.949-0.882-1.319-1.788l-0.35,0.116
+                    c0.164,0.677,0.373,1.675,0.559,2.743l0.047,0.325h0.394c0.186-0.214,0.276-0.261,0.555-0.261c0.162,0,0.51,0.046,0.833,0.116
+                    c0.927,0.208,1.69,0.3,2.455,0.3c3.034,0,5.086-1.691,5.086-4.199C86.765,14.866,85.04,13.682,82.19,12.358z"/>
+                  <path d="M5.302,12.75c-0.349,0-0.68,0.08-0.975,0.222C3.573,13.335,3.053,14.106,3.053,15c0,1.242,1.008,2.25,2.25,2.25
+                    c1.243,0,2.25-1.007,2.25-2.25C7.552,13.757,6.545,12.75,5.302,12.75z"/>
+                  <circle cx="15" cy="15" r="2.25"/>
+                  <path d="M15,0C6.716,0,0,6.715,0,15c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15C30,6.715,23.284,0,15,0z M7.592,19.5
+                    l-0.009-1.126C7.072,18.884,6.189,19.5,5.146,19.5c-2.485,0-4.343-2.015-4.343-4.5c0-2.485,2.015-4.5,4.5-4.5
+                    c0.389,0,0.766,0.049,1.125,0.142c1.941,0.5,3.376,2.261,3.376,4.358c0,0.003,0,0.008,0,0.012L9.828,19.5H7.592z M15,19.5
+                    c-2.475,0-4.482-1.997-4.5-4.467l-0.053-7.896h2.276l0.014,4.237C13.402,10.854,14.174,10.5,15,10.5c2.485,0,4.5,2.015,4.5,4.5
+                    C19.5,17.485,17.485,19.5,15,19.5z M29.054,13.979h-2.378c-0.372-0.729-1.13-1.229-2.004-1.229c-1.243,0-2.251,1.007-2.251,2.25
+                    c0,1.242,1.008,2.25,2.251,2.25c0.876,0,1.636-0.501,2.007-1.234l2.381-0.021c-0.453,2.007-2.245,3.505-4.388,3.505
+                    c-2.486,0-4.5-2.015-4.5-4.5c0-2.485,2.014-4.5,4.5-4.5C26.806,10.5,28.591,11.985,29.054,13.979z"/>
+                </g>
+                <path display="none" d="M-95.715-58.445c-40.561,0-73.443,32.881-73.443,73.443c0,40.559,32.883,73.446,73.443,73.446
+                  c40.56,0,73.442-32.887,73.442-73.446C-22.273-25.564-55.156-58.445-95.715-58.445z M-48.357,37.031
+                  c-12.173,0-22.034-9.864-22.034-22.032c0-12.169,9.861-22.031,22.034-22.031c10.445,0,19.188,7.271,21.454,17.031h-11.642
+                  c-1.822-3.571-5.532-6.017-9.812-6.017c-6.086,0-11.021,4.933-11.021,11.017s4.936,11.014,11.021,11.014
+                  c4.291,0,8.011-2.455,9.826-6.039l11.657-0.105C-29.089,29.694-37.866,37.031-48.357,37.031z M-73.68,14.999
+                  c0,12.168-9.867,22.032-22.035,22.032c-12.115,0-21.945-9.778-22.029-21.874l-0.26-38.663h11.143l0.068,20.747
+                  c3.256-2.544,7.037-4.273,11.078-4.273C-83.547-7.033-73.68,2.83-73.68,14.999z M-84.699,14.999c0-6.084-4.934-11.017-11.017-11.017
+                  c-6.084,0-11.018,4.933-11.018,11.017s4.934,11.014,11.018,11.014C-89.632,26.012-84.699,21.083-84.699,14.999z M-121.038,37.031
+                  h-10.951l-0.043-5.515c-2.5,2.498-6.824,5.515-11.931,5.515c-12.167,0-21.267-9.864-21.267-22.032
+                  c0-12.169,9.864-22.031,22.032-22.031c1.904,0,3.748,0.238,5.509,0.692c9.507,2.444,16.528,11.071,16.528,21.339
+                  c0,0.018-0.002,0.041-0.002,0.059L-121.038,37.031z M-132.18,14.999c0-6.084-4.932-11.017-11.018-11.017
+                  c-1.707,0-3.331,0.39-4.771,1.087c-3.693,1.779-6.242,5.557-6.242,9.93c0,6.084,4.934,11.014,11.014,11.014
+                  C-137.112,26.012-132.18,21.083-132.18,14.999z"/>
+              </svg>
+            </a>  
+        </div>
+        <div class="col-md-12 col-xs-12">
+          <h1  class="bordertop">The Donald Trump Random Sentence Generator</h1>
+        </div>
+        <div class="col-xs-12">
+          <button id="trump_textGen" class="btn btn-primary btn-lg btn-block" type="button">Trump Me</button>
+        </div>
+        <div class="padit col-xs-12">
+          <div id="trump_jargon" class="well"></div>
+        </div>
+        
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var bs = [
+        'Tiny children are not horses.',
+        'I don&#39;t want to use the word "screwed," but I screwed him.',
+        'I beat China all the time. All the time.',
+        'If he was born in this country, it&#39;s one of the great scams or all time.',
+        'Robert Pattinson should not take back Kristen Stewart.',
+        'Stop the EBOLA patients from entering the U.S.',
+        'I refuse to say that because I always insist on being politcally correct.',
+        'Sorry losers and haters, but my I.Q. is one of the highest.',
+        'Please don&#39;t feel so stupid or insecure, it&#39;s not your fault.',
+        'I never fall for scams.',
+        'The concept of global warming was created by and for the Chinese in order to make U.S. manufacturing non-competitive.',
+        'I don&#39;t wear a "rug"—it&#39;s mine.',
+        'If you saw Miss Universe girls you would reconsider',
+        'I have a great relationship with the blacks.',
+        'I think the only difference between me and the other candidates is that I&#39;m more honest and my women are more beautiful.',
+        'You know, it doesn&#39;t really matter what the media write as long as you&#39;ve got a young and beautiful piece of ass.',
+        'I don&#39;t like Joh Mayer—he dates and tells.',
+        'Because I don&#39;t want to Greta.',
+
+      ];
+      document.querySelector('#button_facebook').onclick = function(event) {
+        var text = "";
+        var url = window.location.href;
+        var wnd = window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(url) + '&p[summary]=' + encodeURIComponent(text), 'facebook-share-dialog', 'height=436,width=626');
+        if(window.focus) { wnd.focus(); }
+        return false;
+      };
+      document.querySelector('#button_twitter').onclick = function(event) {
+        var text = 'This generates Donald Trump quotes. via @abcnews';
+        var url = window.location.href;
+        var wnd = window.open('http://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '', 'height=480,width=640');
+        if(window.focus) { wnd.focus(); }
+        return false;
+      };
+      document.querySelector('#button_google').onclick = function() {
+        var url = window.location.href;
+        var wnd = window.open('https://plus.google.com/share?url=' + encodeURIComponent(url), '', 'height=480,width=640');
+        if(window.focus) { wnd.focus(); }
+        return false;
+      };
+
+      var JargonGen = (function () {
+
+        // Private
+        var _createRandNumBetween = function(min,max) {
+            return Math.floor(Math.random()*(max-min+1)+min);
+        };
+        var _capitalizeFirstLetter = function(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        };
+
+        // Public
+        var populate = function(container) {
+          document.querySelector(container)
+            .innerHTML = '<p>' 
+              + this.randomParagraph(bs, this.randomSentence) 
+              + '</p>';
+        };
+        var randomSentence = function(ogArray) {
+          var randomizedWords = [],
+              randomLength    = _createRandNumBetween(3, 7),
+              arr             = ogArray.slice(0);
+
+          for(var i = 0; i < randomLength; i++) {
+            var randomNum      = Math.floor(Math.random() * arr.length);
+            randomizedWords[i] = (i === 0) ? _capitalizeFirstLetter(arr[randomNum]) : arr[randomNum];
+            arr.splice(randomNum, 1);                
+          }
+          return randomizedWords.join(' ') + '.';
+        };
+        var randomParagraph = function(ogArray, cb) { 
+          var randomLength = _createRandNumBetween(6, 12),
+              a            = [],
+              t            = ogArray.slice(0);
+
+          for(var i=0; i < randomLength; i++) {
+            a[i] = cb(ogArray);
+          }
+          return a.join(' ');
+        };
+        
+        return {
+          populate        : populate,
+          randomSentence  : randomSentence,
+          randomParagraph : randomParagraph
+        };
+
+      })();
+
+      //Populate container on load
+      JargonGen.populate('#trump_jargon');
+
+      //Refresh container when button clicked
+      document.querySelector('#trump_textGen').onclick = function() {
+        JargonGen.populate('#trump_jargon');
+      }
+    </script>
+  </body>
+</html>
