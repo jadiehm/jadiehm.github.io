@@ -1,0 +1,233 @@
+body{
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+header{
+	width:70%;
+	margin: 0 auto;
+	position:relative;
+}
+
+h3{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 16px;;
+}
+
+h1{
+	font-family: 'Fontdiner Swanky';
+	font-size: 90px;
+	padding: 0;
+	margin-top: -20px;
+	margin-bottom: -20px;
+}
+
+.bg{
+	background-color: yellow;
+	width:100%;
+	height: 1160px;
+	float: left;
+	z-index: -2;
+}
+
+.frame{
+	width: 70%;
+	height:800px;
+	position:relative;
+	margin: 10px auto 0px auto;
+	border: 5px solid black;
+	background-color: white;
+	z-index: 2;
+
+}
+
+.notes{
+	background-color: white;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	width: 100%;
+	height: 190px;
+	text-align:center;
+	position:relative;
+	float: left;
+	margin-top: -60px;
+	z-index: 1;
+}
+
+.large{
+	margin-top:70px;
+	font-family:'Source Sans Pro';
+	font-weight: 900;
+	font-size: 36px;
+	margin-bottom: -10px;
+}
+
+.small{
+	font-family:'Source Sans Pro';
+	font-size: 18px;
+}
+
+.bold{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:700;
+}
+
+.social svg {
+        height: 30px;
+        width: 30px;
+        margin: 10px 0 0 10px;
+        position:relative;
+        float:left;
+      }
+
+.social svg, .logo svg { fill: black; }
+.social svg:hover, .logo svg:hover, .abc svg {
+        fill: blue;
+      }
+
+.credit{
+	font-family: 'Source Sans Pro';
+	font-weight: 300;
+	float:right;
+	margin-right:10px;
+	font-size:10pt;
+}
+
+.trump{
+	margin-left:25px;
+	margin-top: 0px;
+	position:relative;
+	width:90%;
+	float:left;
+}
+
+img{
+	float:right;
+	position:relative;
+	z-index: 100;
+	margin-top:-90px;
+}
+
+.credit a{
+	text-decoration: none;
+}
+
+.credit a:visited{
+	color: black;
+}
+
+.credit a:hover{
+	color: blue;
+}
+
+/*MEDIA SIZE 640*/
+@media screen and (max-width: 640px) {
+	header{
+	width:90%;
+	margin: 0 auto;
+	position:relative;
+	}
+
+	h1{
+	font-size: 90px;
+	margin-top: -20px;
+	margin-bottom: -20px;
+	}
+
+	.frame{
+	width: 90%;
+	height:760px;
+	}
+
+	.large{
+	margin-top:35px;
+	font-size: 34px;
+	margin-bottom: -10px;
+	}
+
+	.small{
+	font-size: 16px;
+	}
+
+	.trump{
+	margin-top:-30px;
+	margin-left:27px;
+	position:relative;
+	width:90%;
+	}
+
+	.notes{
+		height:145px;
+		margin-top: -30px;
+	}	
+
+	.bg{
+	height: 1110px;
+	}
+
+	img{
+	margin-top:-90px;
+	}
+
+/*MEDIA SIZE 414*/
+@media screen and (max-width: 414px) {
+	header{
+	width:90%;
+	margin: 0 auto;
+	position:relative;
+	}
+
+	h1{
+	font-size: 56px;
+	margin-top: -20px;
+	margin-bottom: -20px;
+	}
+
+	.frame{
+	width: 90%;
+	height:460px;
+	margin-bottom: -100px;
+	}
+
+	.large{
+	margin-top:10px;
+	font-size: 26px;
+	margin-bottom: -15px;
+	}
+
+	.small{
+	font-size: 15px;
+	}
+
+	.trump{
+	margin-top:-175px;
+	margin-left:36px;
+	position:relative;
+	width:80%;
+	}
+
+	.notes{
+		height:95px;
+		margin-top: -145px;
+	}	
+
+	.bg{
+	height: 745px;
+	}
+
+	img{
+	margin-top:-220px;
+	width:15%;
+	}
+
+	.social svg {
+        margin: -29px 0 0 10px;
+    }
+
+    .credit{
+    	margin-top:-29px;
+    }	
+
+
+
