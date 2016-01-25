@@ -1,5 +1,5 @@
 body{
-	background-color: #fafafa;	
+	background-color: #f1f1f1;	
 }
 
 header{
@@ -27,7 +27,7 @@ h1{
 	max-width: 800px;
 	margin: 0 auto;
 	height: 1160px;
-	border: 1px solid #33333;
+	border: 1px solid #333333;
 	border-radius: 3px;
 	z-index: -2;
 }
