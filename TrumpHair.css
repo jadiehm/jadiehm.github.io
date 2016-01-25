@@ -1,6 +1,5 @@
 body{
-	max-width: 800px;
-	margin: 0 auto;
+	background-color: #fafafa;	
 }
 
 header{
@@ -25,7 +24,8 @@ h1{
 
 .bg{
 	background-color: yellow;
-	width:100%;
+	max-width: 800px;
+	margin: 0 auto;
 	height: 1160px;
 	float: left;
 	z-index: -2;
