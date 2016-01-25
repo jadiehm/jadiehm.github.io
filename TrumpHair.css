@@ -180,7 +180,7 @@ img{
 	}
 
 	h1{
-	font-size: 56px;
+	font-size: 40px;
 	margin-top: -20px;
 	margin-bottom: -20px;
 	}
@@ -235,7 +235,7 @@ img{
 @media screen and (max-width: 320px) {
 
 	h1{
-	font-size: 40px;
+	font-size: 30px;
 	}
 }	
 
