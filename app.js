@@ -195,7 +195,7 @@ $(document).ready(function() {
 
           //Load in data
           queue()
-		        .defer(d3.json, "data/us2.json")
+		        .defer(d3.json, "us2.json")
 		        .await(appendMap);
 
           //Append map
